@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Title from "../Title";
 import CartColums from "./CartColums";
 import EmptyCart from "./EmptyCart";
-import {ItemConsumer } from "../../context";
+import { ItemConsumer } from "../../context";
 import CartList from "./CartList";
+import CartTotals from './CartTotals';
 
 export default class Cart extends Component {
     render() {
@@ -12,12 +13,13 @@ export default class Cart extends Component {
                 <ItemConsumer>
                     {value =>{
                         const {cart} = value;
-                        if(cart.lenght > 0){
+                        if(cart.lenght < 0){
                             return (
                                 <React.Fragment>
                                 <Title name="your" title="cart" />
                                 <CartColums />
                                 <CartList value={value} />
+                                <CartTotals value={value} />
                                 </React.Fragment>
                             );
                         } else {

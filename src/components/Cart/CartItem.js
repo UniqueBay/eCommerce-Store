@@ -8,7 +8,7 @@ export default function CartItem({ item, value }) {
             <div classNAme="col-10 mx-auto col-lg-2">
                 <img 
                     src={image}
-                    style={{ width: "5rem", geight: "5rem" }}
+                    style={{ width: "5rem", height: "5rem" }}
                     className="img-fluid"
                     alt="product" />
             </div>

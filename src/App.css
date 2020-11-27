@@ -22,7 +22,7 @@ body{
   color: var(--lightBlue);
 }
 .btn-black{
-  background:transparent;
+  background: transparent;
   text-transform: capitalize;
   font-size: 0.8rem !important;
   color: var(--mainDark);
